@@ -1,0 +1,730 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #000000;
+  --card: rgba(14, 14, 14, 0.84);
+  --card-2: rgba(18, 18, 18, 0.92);
+  --stroke: rgba(255, 255, 255, 0.08);
+  --stroke-strong: rgba(255, 122, 26, 0.22);
+  --text: #ffffff;
+  --text-soft: rgba(255, 255, 255, 0.82);
+  --text-muted: rgba(255, 255, 255, 0.62);
+  --orange: #ff7a1a;
+  --orange-2: #ff9a1f;
+  --red: #ff5b5b;
+  --shadow: 0 14px 38px rgba(0, 0, 0, 0.28);
+  --shadow-orange: 0 14px 35px rgba(255, 106, 0, 0.28);
+  --radius: 22px;
+  --transition: 0.25s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  background: var(--bg);
+}
+
+body {
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  line-height: 1.5;
+}
+
+.resultado-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.resultado-card {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: var(--radius);
+  padding: 22px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: var(--shadow);
+}
+
+.resultado-card h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.resultado-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(255, 122, 26, 0.10);
+  border: 1px solid rgba(255, 122, 26, 0.30);
+  color: #ffb37a;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.resultado-hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 26px 16px 36px;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.55) 62%, rgba(0,0,0,0.92) 100%),
+    url("img/89ebbcb216e7a544bbe31b358127a155.jpg") center center / cover no-repeat;
+}
+
+.resultado-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at top right, rgba(255,122,26,0.15), transparent 32%),
+    linear-gradient(to bottom, rgba(0,0,0,0.16), rgba(0,0,0,0.92));
+  z-index: 1;
+}
+
+.resultado-topo {
+  max-width: 760px;
+  margin-bottom: 24px;
+}
+
+#resultadoHeadline {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1.04;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+
+#resultadoSubheadline {
+  max-width: 660px;
+  color: var(--text-soft);
+  font-size: 15px;
+  line-height: 1.65;
+}
+
+.resultado-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 380px;
+  gap: 16px;
+  align-items: start;
+}
+
+.resultado-linhas {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.resultado-item {
+  min-height: 74px;
+  padding: 12px 12px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+.resultado-item.destaque {
+  background: linear-gradient(135deg, rgba(255,106,0,0.18), rgba(255,140,0,0.10));
+  border-color: rgba(255,140,0,0.26);
+}
+
+.label {
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.valor-texto {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.3;
+  word-break: break-word;
+}
+
+.imc-destaque {
+  color: var(--orange);
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.oferta-card {
+  position: sticky;
+  top: 18px;
+  background:
+    linear-gradient(180deg, rgba(255,122,26,0.06), rgba(255,122,26,0.02)),
+    var(--card-2);
+  border: 1px solid rgba(255,122,26,0.14);
+}
+
+.oferta-destaque {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(255,106,0,0.14), rgba(255,140,0,0.08));
+  border: 1px solid var(--stroke-strong);
+  border-radius: 20px;
+  padding: 22px 18px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.tag-oferta {
+  display: inline-block;
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff6a00, #ff9a1f);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.8px;
+  margin-bottom: 12px;
+}
+
+.titulo-oferta {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.3;
+  color: rgba(255,255,255,0.95);
+  margin-bottom: 12px;
+}
+
+.preco-impacto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+
+.preco-antigo {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--red);
+  text-decoration: line-through;
+}
+
+.preco-novo-box {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 3px;
+  padding: 10px 16px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ff6a00, #ff9a1f);
+  box-shadow: 0 14px 34px rgba(255,106,0,0.40);
+}
+
+.cifrao {
+  font-size: 18px;
+  font-weight: 900;
+  margin-top: 5px;
+  color: #fff;
+}
+
+.preco-valor {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 42px;
+  font-weight: 900;
+  line-height: 1;
+  color: #fff;
+}
+
+.aviso-preco {
+  font-size: 12px;
+  color: rgba(255,255,255,0.72);
+}
+
+.beneficios-oferta {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin: 0 0 18px;
+}
+
+.beneficios-oferta li {
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+  color: #fff;
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.garantia-texto {
+  margin-top: 12px;
+  text-align: center;
+  color: #ffcfac;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.btn-principal,
+.btn-secundario {
+  width: 100%;
+  border: none;
+  border-radius: 999px;
+  padding: 15px 18px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform var(--transition), box-shadow var(--transition), background var(--transition), opacity var(--transition), filter var(--transition);
+}
+
+.btn-principal {
+  background: linear-gradient(135deg, #ff6a00, #ff9a1f);
+  color: #fff;
+  box-shadow: var(--shadow-orange);
+}
+
+.btn-principal:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.04);
+  box-shadow: 0 18px 42px rgba(255, 106, 0, 0.36);
+}
+
+.btn-secundario {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.14);
+}
+
+.btn-secundario:hover {
+  background: rgba(255,255,255,0.05);
+}
+
+.final-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.resultado-impacto-section,
+.resultado-beneficios-section,
+.resultado-final-section {
+  padding: 26px 16px 40px;
+  background: #000;
+}
+
+.impacto,
+.final-cta {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.impacto {
+  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(255,70,70,0.08), rgba(255,122,26,0.06)),
+    rgba(12, 12, 12, 0.88);
+  border: 1px solid rgba(255, 96, 96, 0.12);
+}
+
+.impacto p {
+  color: var(--text-soft);
+}
+
+.section-header {
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 22px;
+}
+
+.section-header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.beneficios-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.beneficio-card {
+  background: rgba(16,16,16,0.90);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 18px;
+  padding: 18px 16px;
+  text-align: center;
+}
+
+.icone {
+  font-size: 26px;
+  margin-bottom: 10px;
+}
+
+.beneficio-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+  margin-bottom: 8px;
+}
+
+.beneficio-card p,
+.final-cta p {
+  color: var(--text-soft);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.final-cta {
+  text-align: center;
+}
+
+@media (max-width: 991px) {
+  .resultado-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .oferta-card {
+    position: relative;
+    top: 0;
+    order: -1;
+  }
+
+  .beneficios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #resultadoHeadline {
+    font-size: 34px;
+  }
+
+  .section-header h2 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 600px) {
+  .resultado-hero {
+    min-height: auto;
+    padding: 18px 10px 24px;
+    background-position: center top;
+  }
+
+  .resultado-impacto-section,
+  .resultado-beneficios-section,
+  .resultado-final-section {
+    padding: 18px 10px 26px;
+  }
+
+  .resultado-card {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .resultado-topo {
+    margin-bottom: 16px;
+  }
+
+  .resultado-badge {
+    font-size: 9px;
+    padding: 5px 9px;
+    margin-bottom: 8px;
+  }
+
+  #resultadoHeadline {
+    font-size: 25px;
+    line-height: 1.10;
+    margin-bottom: 8px;
+  }
+
+  #resultadoSubheadline {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .resultado-card h2 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+  .resultado-linhas {
+    gap: 7px;
+  }
+
+  .resultado-item {
+    min-height: 58px;
+    padding: 9px;
+    border-radius: 12px;
+  }
+
+  .label {
+    font-size: 10px;
+  }
+
+  .valor-texto {
+    font-size: 11px;
+  }
+
+  .imc-destaque {
+    font-size: 15px;
+  }
+
+  .titulo-oferta {
+    font-size: 15px;
+  }
+
+  .preco-antigo {
+    font-size: 18px;
+  }
+
+  .preco-valor {
+    font-size: 32px;
+  }
+
+  .cifrao {
+    font-size: 15px;
+    margin-top: 4px;
+  }
+
+  .beneficios-oferta li {
+    font-size: 12px;
+    padding: 9px 10px;
+  }
+
+  .btn-principal,
+  .btn-secundario {
+    font-size: 12px;
+    padding: 13px 14px;
+  }
+
+  .garantia-texto {
+    font-size: 11px;
+  }
+
+  .section-header h2 {
+    font-size: 22px;
+  }
+
+  .beneficios-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .beneficio-card {
+    padding: 14px 12px;
+    border-radius: 16px;
+  }
+
+  .beneficio-card h3 {
+    font-size: 15px;
+  }
+
+  .beneficio-card p {
+    font-size: 12px;
+  }
+
+  .final-cta h2 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
+  .final-cta p {
+    font-size: 12px;
+  }
+}
+.resultado-prova-section {
+  padding: 22px 16px 34px;
+  background: #000;
+}
+
+.prova-sub {
+  color: rgba(255,255,255,0.75);
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.prova-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.prova-track-wrap {
+  overflow: hidden;
+  width: 100%;
+}
+
+.prova-track {
+  display: flex;
+  transition: transform 0.45s ease;
+}
+
+.prova-card {
+  min-width: 100%;
+  background: rgba(14, 14, 14, 0.88);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 22px;
+  padding: 18px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.20);
+}
+
+.prova-card.lado-a-lado {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.prova-foto-lateral {
+  width: 88px;
+  height: 88px;
+  border-radius: 18px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid rgba(255,122,26,0.30);
+}
+
+.prova-avatar-texto-lateral {
+  width: 88px;
+  height: 88px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: linear-gradient(135deg, #ff6a00, #ff9a1f);
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+}
+
+.prova-conteudo {
+  flex: 1;
+  text-align: left;
+}
+
+.prova-topo-texto {
+  margin-bottom: 8px;
+}
+
+.prova-topo-texto h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.prova-topo-texto span {
+  color: #ffb347;
+  font-size: 13px;
+}
+
+.prova-conteudo p {
+  color: rgba(255,255,255,0.86);
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.prova-btn {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.22s ease;
+  flex-shrink: 0;
+}
+
+.prova-btn:hover {
+  background: rgba(255,122,26,0.18);
+  transform: scale(1.04);
+}
+
+.prova-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.prova-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.22);
+  cursor: pointer;
+  transition: 0.22s ease;
+}
+
+.prova-dot.ativo {
+  background: #ff7a1a;
+  transform: scale(1.15);
+}
+
+@media (max-width: 600px) {
+  .resultado-prova-section {
+    padding: 18px 10px 26px;
+  }
+
+  .prova-card {
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .prova-card.lado-a-lado {
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .prova-foto-lateral,
+  .prova-avatar-texto-lateral {
+    width: 64px;
+    height: 64px;
+    border-radius: 14px;
+  }
+
+  .prova-avatar-texto-lateral {
+    font-size: 22px;
+  }
+
+  .prova-topo-texto h3 {
+    font-size: 15px;
+  }
+
+  .prova-conteudo p {
+    font-size: 13px;
+  }
+
+  .prova-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 20px;
+  }
+}

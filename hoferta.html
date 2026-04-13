@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seu Resultado | STRYVEFIT</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="hoferta.css" />
+</head>
+<body data-pagina="hoferta">
+
+  <section class="resultado-hero">
+    <div class="resultado-overlay"></div>
+
+    <div class="resultado-container">
+      <div class="resultado-topo">
+        <span class="resultado-badge">RESULTADO PERSONALIZADO</span>
+        <h1 id="resultadoHeadline">Seu plano ideal está pronto</h1>
+        <p id="resultadoSubheadline">
+          Com base nas suas respostas, encontramos a melhor direção para acelerar sua evolução.
+        </p>
+      </div>
+
+      <div class="resultado-grid">
+        <div class="resultado-card principal">
+          <h2>Seu perfil</h2>
+
+          <div class="resultado-linhas">
+            <div class="resultado-item">
+              <span class="label">Nome</span>
+              <span class="valor-texto" id="resultadoNome">-</span>
+            </div>
+
+            <div class="resultado-item">
+              <span class="label">Objetivo</span>
+              <span class="valor-texto" id="resultadoObjetivo">-</span>
+            </div>
+
+            <div class="resultado-item">
+              <span class="label">Dias por semana</span>
+              <span class="valor-texto" id="resultadoDias">-</span>
+            </div>
+
+            <div class="resultado-item">
+              <span class="label">Nível</span>
+              <span class="valor-texto" id="resultadoNivel">-</span>
+            </div>
+
+            <div class="resultado-item">
+              <span class="label">Local</span>
+              <span class="valor-texto" id="resultadoLocal">-</span>
+            </div>
+
+            <div class="resultado-item">
+              <span class="label">Sono</span>
+              <span class="valor-texto" id="resultadoSono">-</span>
+            </div>
+
+            <div class="resultado-item">
+              <span class="label">Estresse</span>
+              <span class="valor-texto" id="resultadoEstresse">-</span>
+            </div>
+
+            <div class="resultado-item destaque">
+              <span class="label">IMC estimado</span>
+              <span class="valor-texto imc-destaque" id="resultadoImc">-</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="resultado-card oferta-card">
+          <div class="oferta-destaque">
+            <span class="tag-oferta">🔥 OFERTA LIMITADA</span>
+
+            <h3 class="titulo-oferta">Acesso completo por apenas:</h3>
+
+            <div class="preco-impacto">
+              <span class="preco-antigo">$49</span>
+
+              <div class="preco-novo-box">
+                <span class="cifrao">$</span>
+                <span class="preco-valor">19</span>
+              </div>
+            </div>
+
+            <p class="aviso-preco">
+              pagamento único • acesso imediato
+            </p>
+          </div>
+
+          <ul class="beneficios-oferta">
+            <li>✅ Plano de treino de 30 dias</li>
+            <li>✅ Estrutura simples e fácil de seguir</li>
+            <li>✅ Guia alimentar prático</li>
+            <li>✅ Método pensado para evolução real</li>
+            <li>✅ Acesso imediato</li>
+          </ul>
+
+          <button id="btnComprarAgora" class="btn-principal" type="button">
+            QUERO MEU PLANO AGORA
+          </button>
+
+          <p class="garantia-texto">
+            Garantia de 7 dias para testar sem risco.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="resultado-impacto-section">
+    <div class="resultado-container">
+      <div class="resultado-card impacto">
+        <h2>Se você continuar no mesmo caminho, nada muda.</h2>
+        <p>
+          Treinar sem direção, errar na alimentação e continuar sem ver evolução só gera frustração.
+          Você não precisa de mais dúvida — precisa de um plano claro.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="resultado-beneficios-section">
+    <div class="resultado-container">
+      <div class="section-header">
+        <span class="resultado-badge">O QUE VOCÊ VAI RECEBER</span>
+        <h2>Tudo o que você precisa para começar certo</h2>
+      </div>
+
+      <div class="beneficios-grid">
+        <div class="beneficio-card">
+          <div class="icone">💪</div>
+          <h3>Treino organizado</h3>
+          <p>Você vai saber exatamente o que fazer em cada dia.</p>
+        </div>
+
+        <div class="beneficio-card">
+          <div class="icone">🔥</div>
+          <h3>Mais eficiência</h3>
+          <p>Pare de perder tempo com treino aleatório e foque no que funciona.</p>
+        </div>
+
+        <div class="beneficio-card">
+          <div class="icone">🥗</div>
+          <h3>Guia alimentar</h3>
+          <p>Uma direção simples para melhorar seu resultado sem complicação.</p>
+        </div>
+
+        <div class="beneficio-card">
+          <div class="icone">📈</div>
+          <h3>Evolução real</h3>
+          <p>Um método mais claro para ganhar massa, definir ou emagrecer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="resultado-prova-section">
+    <div class="resultado-container">
+      <div class="section-header">
+        <span class="resultado-badge">PROVA SOCIAL</span>
+        <h2>Veja o que as pessoas acharam</h2>
+        <p class="prova-sub">
+          Comentários de pessoas comuns que queriam mais clareza, mais resultado e menos enrolação.
+        </p>
+      </div>
+
+      <div class="prova-slider">
+        <button class="prova-btn prova-btn-prev" type="button" aria-label="Comentário anterior">‹</button>
+
+        <div class="prova-track-wrap">
+          <div class="prova-track" id="provaTrack">
+
+            <article class="prova-card lado-a-lado">
+              <img src="img/189c6de3-c8c7-4943-b1fc-16d6ef72c12e.png" alt="Foto de Ana" class="prova-foto-lateral">
+              <div class="prova-conteudo">
+                <div class="prova-topo-texto">
+                  <h3>Ana</h3>
+                  <span>⭐⭐⭐⭐⭐</span>
+                </div>
+                <p>
+                  "Gostei porque é simples de seguir. Antes eu ficava perdida, agora sinto que finalmente tenho direção."
+                </p>
+              </div>
+            </article>
+
+            <article class="prova-card lado-a-lado">
+              <img src="img/5 atividades que ajudam a diminuir a barriga_.jpg" alt="Foto de Lucas" class="prova-foto-lateral">
+              <div class="prova-conteudo">
+                <div class="prova-topo-texto">
+                  <h3>Lucas</h3>
+                  <span>⭐⭐⭐⭐</span>
+                </div>
+                <p>
+                  "O que mais me chamou atenção foi a clareza. Não fica aquela coisa confusa que ninguém consegue manter."
+                </p>
+              </div>
+            </article>
+
+            <article class="prova-card lado-a-lado">
+              <img src="img/before and after weight lose shed 30 pounds in 30 days (1).jpg" alt="Foto de Mariana" class="prova-foto-lateral">
+              <div class="prova-conteudo">
+                <div class="prova-topo-texto">
+                  <h3>Mariana</h3>
+                  <span>⭐⭐⭐⭐</span>
+                </div>
+                <p>
+                  "Eu já tinha tentado outras vezes, mas esse foi o primeiro que me fez sentir que estava no caminho certo."
+                </p>
+              </div>
+            </article>
+
+            <article class="prova-card lado-a-lado sem-foto">
+              <div class="prova-avatar-texto-lateral">R</div>
+              <div class="prova-conteudo">
+                <div class="prova-topo-texto">
+                  <h3>Rafael</h3>
+                  <span>⭐⭐⭐⭐⭐</span>
+                </div>
+                <p>
+                  "Sinceramente, achei que seria só mais um plano igual aos outros. Mas a organização dele me surpreendeu."
+                </p>
+              </div>
+            </article>
+
+            <article class="prova-card lado-a-lado">
+              <img src="img/Transformação de fitness antes e depois.png" alt="Foto de Juliana" class="prova-foto-lateral">
+              <div class="prova-conteudo">
+                <div class="prova-topo-texto">
+                  <h3>Juliana</h3>
+                  <span>⭐⭐⭐⭐⭐</span>
+                </div>
+                <p>
+                  "Gostei muito da forma como tudo foi explicado. Dá vontade de começar na hora e seguir até o fim."
+                </p>
+              </div>
+            </article>
+
+            <article class="prova-card lado-a-lado">
+              <img src="img/shapesasasas.jpg" alt="Foto de Felipe" class="prova-foto-lateral">
+              <div class="prova-conteudo">
+                <div class="prova-topo-texto">
+                  <h3>Felipe</h3>
+                  <span>⭐⭐⭐⭐⭐</span>
+                </div>
+                <p>
+                  "Muito mais direto do que eu imaginava. Sem enrolação, sem excesso de informação. Isso me impressionou."
+                </p>
+              </div>
+            </article>
+
+            <article class="prova-card lado-a-lado sem-foto">
+              <div class="prova-avatar-texto-lateral">C</div>
+              <div class="prova-conteudo">
+                <div class="prova-topo-texto">
+                  <h3>Camila</h3>
+                  <span>⭐⭐⭐⭐</span>
+                </div>
+                <p>
+                  "Me impressionou porque parece algo realmente pensado para quem quer resultado e não quer perder tempo."
+                </p>
+              </div>
+            </article>
+
+            <article class="prova-card lado-a-lado sem-foto">
+              <div class="prova-avatar-texto-lateral">D</div>
+              <div class="prova-conteudo">
+                <div class="prova-topo-texto">
+                  <h3>Diego</h3>
+                  <span>⭐⭐⭐⭐⭐</span>
+                </div>
+                <p>
+                  "Visual profissional, proposta clara e tudo muito objetivo. Passa confiança logo de cara."
+                </p>
+              </div>
+            </article>
+
+          </div>
+        </div>
+
+        <button class="prova-btn prova-btn-next" type="button" aria-label="Próximo comentário">›</button>
+      </div>
+
+      <div class="prova-dots" id="provaDots"></div>
+    </div>
+  </section>
+
+  <section class="resultado-final-section">
+    <div class="resultado-container">
+      <div class="resultado-card final-cta">
+        <h2>Você já sabe o que precisa fazer. Agora só falta começar.</h2>
+        <p>
+          Seu corpo não muda com mais dúvida. Muda com direção, consistência e execução.
+        </p>
+
+        <div class="final-buttons">
+          <button id="btnComprarAgora2" class="btn-principal" type="button">
+            COMEÇAR AGORA POR $19
+          </button>
+
+          <button id="btnRefazer" class="btn-secundario" type="button">
+            REFAZER QUESTIONÁRIO
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
